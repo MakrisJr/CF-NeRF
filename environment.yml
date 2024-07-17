@@ -123,7 +123,6 @@ dependencies:
     - termcolor==1.1.0
     - tifffile==2021.1.14
     - torch==1.6.0
-    - torchsearchsorted==1.1
     - torchvision==0.7.0
     - tqdm==4.48.2
     - trimesh==3.8.4
