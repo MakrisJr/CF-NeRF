@@ -868,7 +868,7 @@ def train(args):
         # train
         rays_rgb_train = np.stack([rays_rgb[i] for i in i_train], 0) # train images only
         rays_rgb_train = np.reshape(rays_rgb_train, [-1,3,3]) # [(N-1)*H*W, ro+rd+rgb, 3]
-        rays_rgb_train = rays_rgb_train.astype(np.float)
+        rays_rgb_train = rays_rgb_train.astype(float)
         print('rays_rgb_train.shape:', rays_rgb_train.shape)
         print('shuffle rays')
         np.random.shuffle(rays_rgb_train)
@@ -876,7 +876,7 @@ def train(args):
         # val
         rays_rgb_val = np.stack([rays_rgb[i] for i in i_val_internal], 0) # val images only
         rays_rgb_val = np.reshape(rays_rgb_val, [-1,3,3]) # [(N-1)*H*W, ro+rd+rgb, 3]
-        rays_rgb_val = rays_rgb_val.astype(np.float)
+        rays_rgb_val = rays_rgb_val.astype(float)
         print('shuffle rays')
         np.random.shuffle(rays_rgb_val)
 
@@ -903,7 +903,7 @@ def train(args):
             print('rays_weights max:', np.max(rays_depth[:,3,0]))
             print('rays_weights min:', np.min(rays_depth[:,3,0]))
             print('rays_depth.shape:', rays_depth.shape)
-            rays_depth = rays_depth.astype(np.float)
+            rays_depth = rays_depth.astype(float)
             print('shuffle depth rays')
             np.random.shuffle(rays_depth)
             i_batch_depth = 0
