@@ -1,0 +1,12 @@
+# environment:
+pip install protobuf==3.20.3
+conda install tqdm scikit-image
+
+# attempt 2
+install requirements.txt
+pip install tensorboard==1.15 --upgrade
+pip install protobuf==3.20.*
+pip install numpy==1.23.5 --upgrade
+pip install imageio==2.3.0 scikit-image
+pip install pillow==7.2.0
+
