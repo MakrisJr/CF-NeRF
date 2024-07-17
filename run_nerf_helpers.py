@@ -6,10 +6,6 @@ import numpy as np
 from kornia import create_meshgrid
 from model.flow.flows import *
 
-# TODO: remove this dependency
-# from torchsearchsorted import searchsorted
-# pytorch implementation: torch.searchsorted
-
 
 # Misc
 img2mse = lambda x, y : torch.mean((x - y) ** 2)
