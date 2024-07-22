@@ -672,7 +672,7 @@ def config_parser():
     # dataset options
     parser.add_argument("--dataset_type", type=str, default='llff', 
                         help='options: llff / blender / deepvoxels')
-    parser.add_argument("--testskip", type=int, default=8, 
+    parser.add_argument("--testskip", type=int, default=1, 
                         help='will load 1/N images from test/val sets, useful for large datasets like deepvoxels')
 
     ## deepvoxels flags
@@ -874,7 +874,7 @@ def train(args):
         np.random.shuffle(rays_rgb_train)
 
         # val
-        rays_rgb_val = np.stack([rays_rgb[i] for i in i_val_internal], 0) # val images only
+        rays_rgb_val = np.stack([rays_rgb[i] for i in i_val], 0) # val images only
         rays_rgb_val = np.reshape(rays_rgb_val, [-1,3,3]) # [(N-1)*H*W, ro+rd+rgb, 3]
         rays_rgb_val = rays_rgb_val.astype(float)
         print('shuffle rays')
