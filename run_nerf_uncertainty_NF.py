@@ -848,7 +848,7 @@ def train(args):
             rgbs, _, _, _, _ = render_path(render_poses, hwf, args.chunk, render_kwargs_test, gt_imgs=images, savedir=testsavedir, render_factor=args.render_factor)
             print('Done rendering', testsavedir)
             print('rgbs shape', rgbs.shape)
-            imageio.mimwrite(os.path.join(testsavedir, 'video.mp4'), to8b(np.mean(rgbs, -1)), fps=30, quality=8)
+            imageio.mimwrite(os.path.join(testsavedir, 'video.mp4'), to8b(np.mean(rgbs, -1)), fps=2, quality=8)
 
             return
 

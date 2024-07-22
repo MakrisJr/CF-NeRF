@@ -1,0 +1,7 @@
+dataname = ship_8v
+basedir = ./logs/ship_8v
+datadir = /home/thanostriantafyllou/CF-NeRF/data/free_nerf_runs/ship_8v
+dataset_type = blender
+
+use_viewdirs = True
+raw_noise_std = 1e0
